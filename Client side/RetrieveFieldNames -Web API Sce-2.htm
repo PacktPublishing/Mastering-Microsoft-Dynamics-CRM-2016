@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="ClientGlobalContext.js.aspx"></script>
+    <script type="text/jscript" src="https://dynamistydemo.crm.dynamics.com//WebResources/mcs_jquerymin"></script>
+    <script type="text/jscript">
+		//Function called when the web resource is loaded
+        $(document).ready(function () {
+        //Initializing requet
+            var req = new XMLHttpRequest();
+
+            //Opens request
+            req.open("GET", window.parent.Xrm.Page.context.getClientUrl() + "/api/data/v8.2/EntityDefinitions(LogicalName='contact')/Attributes", true);
+
+            //Sets request Headers
+            req.setRequestHeader("OData-MaxVersion", "4.0");
+            req.setRequestHeader("OData-Version", "4.0");
+            req.setRequestHeader("Accept", "application/json");
+            req.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+            req.setRequestHeader("Prefer", "odata.include-annotations=\"*\"");
+
+            //Function to detect ready state change
+            req.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    req.onreadystatechange = null;
+
+                    //Check if request completed successfully
+                    if (this.status === 200) {
+                        var result = JSON.parse(this.response);
+                        var index = 1;
+                        for (var i = 0; i < result.value.length; i++) {
+                        	//Gets schemaname from response.
+                            var schemaName = result.value[i].SchemaName;
+                            $("#Entities").append("<option value='" + index + "'>" + schemaName + "</option>");
+                            index = index + 1;
+                        }
+
+                    }
+                    else {
+                        Xrm.Utility.alertDialog(this.statusText);
+                    }
+                }
+            };
+            req.send();
+
+        });
+    </script>
+
+    <style type="text/css">
+        .select {
+            font-size: 12px;
+            font-family: Segoe\000020UI;
+            color: #444444;
+            margin: -8px;
+        }
+
+        .control {
+            margin-left: 108px;
+            font-size: 12px;
+            height: 23px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="select">
+        <label for="Entities">Fields</label>
+        <select name="Entities" id="Entities" class="control">
+            <option value="0">--<options>
+        </select>
+    </div>
+</body>
+</html>

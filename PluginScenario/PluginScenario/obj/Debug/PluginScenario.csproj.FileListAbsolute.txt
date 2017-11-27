@@ -1,0 +1,8 @@
+c:\users\pc001\documents\visual studio 2015\Projects\PluginScenario\PluginScenario\bin\Debug\PluginScenario.dll
+c:\users\pc001\documents\visual studio 2015\Projects\PluginScenario\PluginScenario\bin\Debug\PluginScenario.pdb
+c:\users\pc001\documents\visual studio 2015\Projects\PluginScenario\PluginScenario\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+c:\users\pc001\documents\visual studio 2015\Projects\PluginScenario\PluginScenario\bin\Debug\Microsoft.Xrm.Sdk.dll
+c:\users\pc001\documents\visual studio 2015\Projects\PluginScenario\PluginScenario\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+c:\users\pc001\documents\visual studio 2015\Projects\PluginScenario\PluginScenario\bin\Debug\Microsoft.Xrm.Sdk.xml
+c:\users\pc001\documents\visual studio 2015\Projects\PluginScenario\PluginScenario\obj\Debug\PluginScenario.dll
+c:\users\pc001\documents\visual studio 2015\Projects\PluginScenario\PluginScenario\obj\Debug\PluginScenario.pdb

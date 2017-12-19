@@ -35,5 +35,3 @@ The software in this book can be run on the Windows.
 
 * [Microsoft Dynamics CRM Customization Essentials](https://www.packtpub.com/application-development/microsoft-dynamics-crm-customization-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781786463593)
 
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
